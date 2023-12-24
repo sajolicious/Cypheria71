@@ -83,7 +83,7 @@ const Footer: React.FC<FooterProps> = () => {
         </div>
       </div>
       <div className="font-libre text-white text-center py-2 mx-auto border-white md:border-[#313234]">
-        © 2023│All rights reserved by Nexwift Pvt. Ltd.
+        © 2023│All rights reserved by Cypheria71
       </div>
     </div>
   );
