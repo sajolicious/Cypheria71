@@ -3,6 +3,8 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Slider from './components/Slider';
 import Home from './components/Home';
+import WhatWeDo from './components/WhatWeDo';
+import Footer from './components/Footer';
 const App: React.FC = () => {
   const backgroundColor = 'red';
 
@@ -11,6 +13,8 @@ const App: React.FC = () => {
       <Navbar backgroundColor={backgroundColor} />
       <Home/>
       <Slider/>
+      <WhatWeDo/>
+      <Footer/>
     </div>
   );
 };
