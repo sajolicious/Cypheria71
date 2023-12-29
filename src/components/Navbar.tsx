@@ -8,7 +8,7 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ backgroundColor }) => {
   return (
-    <nav className="bg-[#FFF8F1] p-4">
+    <nav className="bg-[#F4F4F4] p-4 ">
       <div className="container mx-auto flex justify-between items-center">
         <img src={cyperia71} alt='cyperiaLogo' className='w-[124px] h-[32px]'/>
         <div className="lg:hidden"></div>
