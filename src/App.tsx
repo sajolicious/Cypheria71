@@ -1,10 +1,11 @@
 // App.tsx (or any other parent component)
 import React from 'react';
 import Navbar from './components/Navbar';
-import Slider from './components/Slider';
-import Home from './components/Home';
+import Home from './components/HomeScreen';
 import WhatWeDo from './components/WhatWeDo';
+import AboutUs from './components/AboutUsScreen';
 import Footer from './components/Footer';
+
 const App: React.FC = () => {
   const backgroundColor = 'red';
 
@@ -12,8 +13,9 @@ const App: React.FC = () => {
     <div>
       <Navbar backgroundColor={backgroundColor} />
       <Home/>
-      <Slider/>
+      <AboutUs/>
       <WhatWeDo/>
+   
       <Footer/>
     </div>
   );

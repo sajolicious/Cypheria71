@@ -17,7 +17,7 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = () => {
   const position = [23.174194, 90.1739155]; 
-  
+
   return (
     <div className="flex flex-col space-y-5 bg-black pt-[10px]">
       <div className="md:flex md:flex-row lg:w-[90%] lg:mx-auto flex-col space-y-10 px-4 lg:px-8 md:justify-between">
