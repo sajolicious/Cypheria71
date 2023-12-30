@@ -1,34 +1,40 @@
-import React from "react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import 'swiper/css/scrollbar'
+import React from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
 
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
-
-const Slider: React.FC = () => {
+import team1 from '../img/team1.webp'
+import team2 from '../img/team2.webp'
+import team3 from '../img/team3.webp'
+import team4 from '../img/team4.webp'
+const OurServices: React.FC = () => {
   return (
     <Swiper
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={50}
       slidesPerView={3}
       navigation
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
-      onSlideChange={() => console.log("slide-change")}
+      onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
     >
-      <SwiperSlide>Slide 1</SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
-      <SwiperSlide>Slide 1</SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
+      <SwiperSlide>
+        <img src={team1} alt="team1" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src={team2} alt="team2" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src={team3} alt="team3" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src={team4} alt="team4" />
+      </SwiperSlide>
     </Swiper>
-  );
-};
+  )
+}
 
-export default Slider;
+export default OurServices
