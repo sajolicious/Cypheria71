@@ -1,9 +1,8 @@
-import React from "react";
+import React from 'react'
 
-
-const Home:React.FC = () => {
+const Home: React.FC = () => {
   return (
-    <div className="flex flex-col h-screen w-full items-center justify-center">
+    <div className="flex flex-col bg-[#1EE2] h-screen w-full items-center justify-center">
       <div className="text-gray-800 p-8 text-center">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
           We Design and Develop <br />
@@ -12,13 +11,11 @@ const Home:React.FC = () => {
         </h1>
         <div className="text-base md:text-lg lg:text-xl text-center mb-4 font-serif">
           <p>
-            At Cypheria71, we specialize in designing and developing innovative
-            products for businesses and startups.
+            At Cypheria71, we specialize in designing and developing innovative products for businesses and startups.
           </p>
           <p>
-            As a digital transformation and product development consulting firm,
-            our core expertise lies in marketing, design, sales, and software
-            development.
+            As a digital transformation and product development consulting firm, our core expertise lies in marketing,
+            design, sales, and software development.
           </p>
         </div>
         <button className="bg-[#0250F1] hover:bg-blue-400 text-white font-bold py-4 px-8 rounded-full mt-4">
@@ -26,7 +23,7 @@ const Home:React.FC = () => {
         </button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

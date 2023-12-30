@@ -1,24 +1,26 @@
 // App.tsx (or any other parent component)
-import React from 'react';
-import Navbar from './components/Navbar';
-import Home from './components/HomeScreen';
-import WhatWeDo from './components/WhatWeDo';
-import AboutUs from './components/AboutUsScreen';
-import Footer from './components/Footer';
-
+import React from 'react'
+import Navbar from './components/Navbar'
+import Home from './components/HomeScreen'
+import WhatWeDo from './components/WhatWeDo'
+import AboutUs from './components/AboutUsScreen'
+import Footer from './components/Footer'
+import OurServices from './components/OurServices'
+import ContackUs from './components/ContackUs'
 const App: React.FC = () => {
-  const backgroundColor = 'red';
-
+ 
   return (
     <div>
-      <Navbar backgroundColor={backgroundColor} />
-      <Home/>
-      <AboutUs/>
-      <WhatWeDo/>
-   
-      <Footer/>
-    </div>
-  );
-};
+      <Navbar />
+      <Home />
+      <AboutUs />
 
-export default App;
+      <WhatWeDo />
+      <OurServices />
+      <ContackUs />
+      <Footer />
+    </div>
+  )
+}
+
+export default App
