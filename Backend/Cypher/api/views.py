@@ -1,10 +1,10 @@
 from rest_framework import generics, status
 from rest_framework.response import Response
-from .models import ContactUs
-from .serializers import ContactUsSerializer
+from .models import ContactUs, Service
+from .serializers import ContactUsSerializer, ServiceSerializer
+from rest_framework import viewsets 
 
-
-class ContactUsListCreateView(generics.ListCreateAPIView):
+class ContactUsViewSet(viewsets.ModelViewSet):
     queryset = ContactUs.objects.all()
     serializer_class = ContactUsSerializer
 
@@ -33,7 +33,15 @@ class ContactUsListCreateView(generics.ListCreateAPIView):
             serializer.data, status=status.HTTP_201_CREATED, headers=headers
         )
 
+    def destroy(self, request, *args, **kwargs):
+        instance = self.get_object()
+        self.perform_destroy(instance)
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
-class ContactUsDetailView(generics.RetrieveDestroyAPIView):
-    queryset = ContactUs.objects.all()
-    serializer_class = ContactUsSerializer
+class ServiceModelviewSets(viewsets.ModelViewSet):
+    queryset = Service.objects.all()
+    serializer_class = ServiceSerializer
+    
+class ServiceModelReadOnlyviewSets(viewsets.ReadOnlyModelViewSet):
+    queryset = Service.objects.all()
+    serializer_class = ServiceSerializer

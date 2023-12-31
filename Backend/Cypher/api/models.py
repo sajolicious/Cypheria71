@@ -10,3 +10,13 @@ class ContactUs(models.Model):
 
     def __str__(self):
         return f"{self.name} - {self.created_at}"
+
+
+class Service(models.Model):
+    title = models.CharField(max_length=255)
+    description = models.TextField()
+    image = models.ImageField(upload_to='service_images/', null=True, blank=True)
+    category = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.title
