@@ -2,7 +2,7 @@ import React from 'react'
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
-
+import { Link } from 'react-router-dom'
 interface FooterProps {}
 
 const Footer: React.FC<FooterProps> = () => {
@@ -62,24 +62,24 @@ const Footer: React.FC<FooterProps> = () => {
             </div>
             <div className="flex items-center justify-between gap-2">
               <div className="text-xl">
-                <a href="#">
+                <Link to="#">
                   <FaFacebook className="text-white" />
-                </a>
+                </Link>
               </div>
               <div className="text-xl">
-                <a href="#">
+                <Link to="#">
                   <FaTwitter className="text-white" />
-                </a>
+                </Link>
               </div>
               <div className="text-xl">
-                <a href="#">
+                <Link to="#">
                   <FaLinkedin className="text-white" />
-                </a>
+                </Link>
               </div>
               <div className="text-xl">
-                <a href="#">
+                <Link to="#">
                   <FaInstagram className="text-white" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
