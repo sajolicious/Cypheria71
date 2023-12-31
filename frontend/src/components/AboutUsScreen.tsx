@@ -49,13 +49,13 @@ const AboutUsScreen: React.FC<AboutUsScreenProps> = () => {
     config: { mass: 1, tension: 170, friction: 100 },
   })
   return (
-    <div className="flex flex-row h-screen w-full bg-[#1E1E1E]">
+    <div className="flex flex-col md:flex-row h-screen w-full bg-[#1E1E1E]">
       <animated.div
         ref={rightContentRef}
         style={rightContentAnimation}
         className="flex items-center justify-center w-1/3 right-content"
       >
-        <img src={about} alt="Home" className="object-cover  rounded-lg" />
+        <img src={about} alt="Home" className="object-cover rounded-lg " />
       </animated.div>
       <animated.div
         ref={leftContentRef}
@@ -63,11 +63,11 @@ const AboutUsScreen: React.FC<AboutUsScreenProps> = () => {
         className="flex flex-col justify-center w-1/2  mr-10 text-white left-content"
       >
         <span>About Cypheria71</span>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl leading-tight text-left mb-6">
+        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight text-left mb-6">
           Digital transformation and product development company based in Montreal
         </h1>
 
-        <p className="text-base md:text-lg lg:text-xl text-left mb-4 font-mono">
+        <p className="text-sm text-center xl:text-base xl:text-left md mb-4 font-mono">
           Our mission is to provide your organization with a comprehensive toolset of product development solutions. We
           leverage the latest technologies and ecosystems available in today's fast-moving market to build complete new
           ventures and technology-based acquisition channels for our enterprise and startup customers. We automate your
