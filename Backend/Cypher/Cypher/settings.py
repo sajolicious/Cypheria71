@@ -31,15 +31,19 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "jazzmin",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    'corsheaders',
+    "corsheaders",
     "api",
     "rest_framework",
+    
+    
+    
 ]
 
 MIDDLEWARE = [
@@ -82,7 +86,7 @@ DATABASES = {
         "ENGINE": "django.db.backends.mysql",
         "NAME": "cypher_db",  # Set your database name
         "USER": "root",  # Set your database user
-        "PASSWORD": "121097",  # Set your database password
+        "PASSWORD": "sif@t123456",  # Set your database password
         "HOST": "localhost",  # Set your database host (usually 'localhost')
         "PORT": "3306",  # Set your database port (usually '3306')
         "OPTIONS": {
@@ -134,20 +138,20 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:5173',  # Adjust this to match your frontend's origin
+    "http://localhost:5173",  # Adjust this to match your frontend's origin
 ]
 
 CORS_ALLOW_METHODS = [
-    'GET',
-    'POST',
-    'PUT',
-    'PATCH',
-    'DELETE',
-    'OPTIONS',
+    "GET",
+    "POST",
+    "PUT",
+    "PATCH",
+    "DELETE",
+    "OPTIONS",
 ]
 
 CORS_ALLOW_HEADERS = [
-    'Content-Type',
-    'Authorization',
+    "Content-Type",
+    "Authorization",
     # ... add any other allowed headers
 ]

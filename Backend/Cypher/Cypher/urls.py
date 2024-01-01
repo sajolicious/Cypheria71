@@ -1,17 +1,9 @@
+# myproject/urls.py
 from django.contrib import admin
 from django.urls import path, include
-from api import views
-from rest_framework.routers import DefaultRouter
-
-router = DefaultRouter()
-
-router.register ('api/ServiceCRUD',views.ServiceModelviewSets, basename = 'ServiceCRUD')
-router.register ('api/ServiceReadOnly',views.ServiceModelReadOnlyviewSets, basename = 'ServiceReadOnly')
-router.register('api/contactus', views.ContactUsViewSet, basename='contactus')
-
+from api import urls as api_urls  # Import your app-specific urls module
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
-    
-    path('api', include(router.urls)),
+    path('admin/', admin.site.urls),
+    path("", include(api_urls)),
 ]

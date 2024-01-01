@@ -20,3 +20,24 @@ class Service(models.Model):
 
     def __str__(self):
         return self.title
+
+class Project(models.Model):
+    name = models.CharField(max_length=255)
+    description = models.TextField()
+    technologies_used = models.CharField(max_length=255)
+    image = models.ImageField(upload_to='Project_images/', null=True, blank=True)
+    project_url = models.URLField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.name
+    
+class TeamMember(models.Model):
+    name = models.CharField(max_length=100)
+    position = models.CharField(max_length=100)
+    bio = models.TextField()
+    image = models.ImageField(upload_to='team_images/', null=True, blank=True)
+
+    def __str__(self):
+        return self.name

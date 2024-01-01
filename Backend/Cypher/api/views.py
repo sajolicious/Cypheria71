@@ -1,8 +1,8 @@
 from rest_framework import generics, status
 from rest_framework.response import Response
-from .models import ContactUs, Service
-from .serializers import ContactUsSerializer, ServiceSerializer
-from rest_framework import viewsets 
+from .models import ContactUs, Service, Project, TeamMember
+from .serializers import ContactUsSerializer, ServiceSerializer, ProjectSerializer, TeamMemberSerializer
+from rest_framework import viewsets
 
 class ContactUsViewSet(viewsets.ModelViewSet):
     queryset = ContactUs.objects.all()
@@ -38,10 +38,20 @@ class ContactUsViewSet(viewsets.ModelViewSet):
         self.perform_destroy(instance)
         return Response(status=status.HTTP_204_NO_CONTENT)
 
+
 class ServiceModelviewSets(viewsets.ModelViewSet):
     queryset = Service.objects.all()
     serializer_class = ServiceSerializer
-    
+
+
 class ServiceModelReadOnlyviewSets(viewsets.ReadOnlyModelViewSet):
     queryset = Service.objects.all()
     serializer_class = ServiceSerializer
+
+class ProjectModelviewSets(viewsets.ModelViewSet):
+    queryset = Project.objects.all()
+    serializer_class = ProjectSerializer
+
+class TeamMemberModelviewSets(viewsets.ModelViewSet):
+    queryset = TeamMember.objects.all()
+    serializer_class = TeamMemberSerializer
